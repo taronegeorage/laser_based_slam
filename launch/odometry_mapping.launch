@@ -1,0 +1,15 @@
+<launch>
+
+  <node pkg="laser_slam" type="odometry" name="odometry" output="screen" clear_params="true">
+						<rosparam file="$(find laser_slam)/config/default.yaml" command="load" />
+  </node>
+
+  <node pkg="laser_slam" type="mapping" name="mapping" output="screen" clear_params="true">
+						<rosparam file="$(find laser_slam)/config/default.yaml" command="load" />
+  </node>
+  
+	<node pkg="rviz" type="rviz" name="rviz" output="screen" 
+      args="-d $(find laser_slam)/rviz/default.rviz" required="true">
+    </node>
+
+</launch>
