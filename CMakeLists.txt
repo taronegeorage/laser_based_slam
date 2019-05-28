@@ -42,14 +42,14 @@ ${EIGEN3_LIBS}
 )
 
 add_executable(mapping
-ROS/odometry/mapping.cc)
+ROS/odometry_mapping/mapping.cc)
 target_link_libraries(mapping
   ${catkin_LIBRARIES}
   ${PROJECT_NAME}
 )
 
 add_executable(odometry
-ROS/odometry/odometry.cc)
+ROS/odometry_mapping/odometry.cc)
 target_link_libraries(odometry
   ${catkin_LIBRARIES}
   ${PROJECT_NAME}
